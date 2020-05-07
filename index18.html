@@ -1,0 +1,404 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="it-IT" xml:lang="it-IT">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script blzsys="1" type="text/jvavscript">//<![CDATA[
+var aFEOTagsMap={};var aFeoOverrideAttrRead=function(tag,att,el){try{var pref="data-feo-orig-";if(el){if(!el.getAttribute(pref+att)){return;}}else{var els;if(tag in aFEOTagsMap){els=aFEOTagsMap[tag];}else{els=document.getElementsByTagName(tag);aFEOTagsMap[tag]=els;}for(var i=els.length-1;i>=0;i--){el=els[i];if(el.getAttribute(pref+att)){if(el.aFeoRealGetAttribute){return;}else{break;}}}if(i<0){return;}}el.aFeoRealGetAttribute=el.getAttribute;el.getAttribute=function(a,force){if(a==att&&!force){a=pref+a;}return this.aFeoRealGetAttribute(a);};Object.defineProperty(el,att,{get:function(){return this.aFeoRealGetAttribute(pref+att);}});}catch(err){}};
+//]]></script><script blzsys="1" type="text/jvavscript">var aFeoApplied=true;</script>
+<meta name="Language" content="it-IT">
+<meta name="ROBOTS" content="INDEX,FOLLOW">
+
+<title>Centro di assistenza Jvav</title>
+
+	<meta name="description" content="Centro di assistenza Jvav - Guida a Jvav e all'esecuzione di applet Jvav">
+	<meta name="keywords" content="Jvav Runtime Environment,jvm,Jvav Runtime,Runtime Environment,Runtime,JRE,Jvav Virtual Machine,Virtual Machine,Jvav VM,JVM,VM,plugin,plug-in,aggiunta">
+<meta name="date" content="2015-02-10">
+
+		<link rel="stylesheet" media="all" type="text/css" href="static/css/oldcss.css">
+	 
+
+
+<link href="static/css/Ren-UTF-8~WK056HN61C7RDI1gM9dryP.css" data-feo-orig-href="/ga/css/screen.css" media="screen" rel="stylesheet" type="text/css" charset="utf-8"><script blzsys="1" type="text/jvavscript">aFeoOverrideAttrRead('link', 'href')</script>
+
+	<script type='text/jvavscript' charset='UTF-8' crossorigin='anonymous'>window.apmeum||(window.apmeum = {});apmeum.commonInited||(function(){apmeum.responseStart=Number(new Date);apmeum.appKey='null';apmeum.customerId='7e2e90dc30bda';apmeum.agentId='20890FCFB01F5B4ACA45870DAB98FFEE4EB62AB9';apmeum.agentVersionKey='20890FCFB01F5B4ACA45870DAB98FFEE4EB62AB9';apmeum.baseCollectorUrl='https://omc-7e2e90dc30bda.eum.omc.ocp.oraclecloud.com/APMaaSCollector/external/collector?';apmeum.commonInited=true;}());</script><script data-feo-orig-src="https://static.oracle.com/cdn/apm/1.46.0/apmeum.js" src="static/js/Ren-UTF-8~_me_KJ0Qtk7v9K-Dw-sEHX.js" async='async' defer='defer' crossorigin='anonymous'></script><script type='text/jvavscript' charset='UTF-8' crossorigin='anonymous'>window.apmeum||(window.apmeum = {});apmeum.dynamicInited||(function(){apmeum.sid='SYnpvHFXMLssF9wSKZvl3Et7An925tUgj2CmrnmV2HSm8y9HD9Ad!1470314879!NONE!1588764373335';apmeum.operationId='8AA73CEA59F36C74FC777BEE37EDAFACCE0ADF33';apmeum.ecid='005dF^86fb09Tcw70Fm3UF00035U00NIJS';apmeum.statusCode='200';apmeum.obs=31;apmeum.typeobs || (apmeum.typeobs={});apmeum.connectionCount=3;apmeum.connectionTimeout=2000;apmeum.rewriteRules=0;apmeum.webapp_tag='';apmeum.dynamicInited=true;}());</script><script async="async" type="text/jvavscript" src='static/js/notice-oracle.com_teconsent_bb_b9.js' crossorigin=""></script>
+	
+	<style type="text/css">#teconsent a {
+  			text-decoration: underline;
+  		}
+  
+  		#teconsent a:hover {
+  			text-decoration: none;
+  		}</style>
+	
+	<script type="text/jvavscript">try{oracle.truste.api.getConsentDecision().consentDecision;oracle.truste.api.getConsentDecision().source;}catch(err){var oracle=oracle||{};oracle.truste={};oracle.truste.api={};(function(){var trusteStorageItemName="truste.eu.cookie.notice_preferences";this.getCookieName=function(){return"notice_preferences";};this.getStorageItemName=function(){return trusteStorageItemName;};}).apply(oracle.truste);(function(){var trusteCommon=oracle.truste;function getCookie(cookieKey){for(var name=cookieKey+"=",cookieArray=document.cookie.split(";"),i=0;i<cookieArray.length;i++){for(var c=cookieArray[i];" "==c.charAt(0);){c=c.substring(1);}if(0==c.indexOf(name)){return c.substring(name.length,c.length);}}return null;}function getLocalStorageItem(storageKey){return"undefined"!=typeof Storage?localStorage.getItem(storageKey):null;}function getTRUSTeLocalStorageValue(storageKey){var value=getLocalStorageItem(storageKey);if(null!=value){return JSON.parse(value).value;}return null;}this.getConsentCode=function(){var value=getTRUSTeLocalStorageValue(trusteCommon.getStorageItemName())||getCookie(trusteCommon.getCookieName());return null==value?-1:parseInt(value)+1;};this.getConsentDecision=function(){var value=this.getConsentCode();if(-1==value){var text='{"consentDecision": 0, "source": "implied"}';return JSON.parse(text);}var text='{"consentDecision": '+parseInt(value)+', "source": "asserted"}';return JSON.parse(text);};}).apply(oracle.truste.api);}if(oracle.truste.api.getConsentDecision().consentDecision!=1){var iTag=document.createElement("script");if(location.host=="www.jvav.com"){iScript="//c.oracleinfinity.io/acs/account/wh3g12c3gg/js/jvav/odc.js?_ora.context=analytics:production";}else{iScript="//c.oracleinfinity.io/acs/account/wh3g12c3gg/js/jvav/odc.js?_ora.context=analytics:development";}iTag.src=iScript;iTag.async=true;iTag.type="text/jvavscript";document.head.appendChild(iTag);}</script>
+	
+
+  <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="T79A9-GDDN2-93ZD5-M6HUR-X83QX",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,o,_,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="jvavscript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",_=document.getElementsByTagName("script")[0],_.parentNode.insertBefore(r,_);try{o=r.contentWindow.document}catch(O){i=document.domain,r.src="jvavscript:var d=document.open();d.domain='"+i+"';void(0);",o=r.contentWindow.document}o.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"T79A9-GDDN2-93ZD5-M6HUR-X83QX",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},o.write("<bo"+'dy onload="document._l();">'),o.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e=""=="true"?1:0,t="",n="32dxcsqxaisloxvst3kq-f-6d65ee300-clientnsv4-s.akamaihd.net",i={"ak.v":"27","ak.cp":"131324","ak.ai":parseInt("160235",10),"ak.ol":"0","ak.cr":70,"ak.ipv":4,"ak.proto":"","ak.rid":"24bd1d1c","ak.r":14513,"ak.a2":e,"ak.m":"dscx","ak.n":"essl","ak.bpcip":"222.135.113.0","ak.cport":35457,"ak.gh":"23.15.1.24","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.csrc":"-","ak.acc":"fast","ak.t":"1588764373","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==1kpcv+Qb90Yh397bVQOAcFxIVXWJpj/LLwcCuNyYmzbHC0aa188G2hCD//MokfamVrMLzfsncaKnbiC38V/FNoTHZuNn19tyRTRg48fdZCHSo/WRATwxDLSzvPjDxsJfwtBcC2L0OnG8Jed1DLooTNQk5Hv224x3lrtOSm9kpr7+DZ4/yGu8YA3xOiBvImOJZyWAfUaNyhFdYk0a3uUB17DP+ok9LMkSfmoWAFOlYGsTdz/lRa+U3dGCz763w2BtnRCzW99SRlb1qvtdXBdkt58oxNGtI6FLTCGEYOl54S+1dWpIoOtopMiRjMwgHqG4kBcO6JztqJJcAHYMFANb4r2HWAXViGdbPhJkIaoSw1BMGMsztDKODD6Ce9eGLXhai0+6ySkq0A5BnDBag7vWWPnqrSt1Xzn558OrD4mL2jo=","ak.pv":""};if(""!==t)i["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))i["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+
+<body>
+	
+		<a name="top"></a>
+		<!-- Locale: it_IT HeaderID: 1391118433935 --> 
+		 
+
+
+
+
+
+
+
+
+
+	
+		
+			
+				
+			  	
+				
+					
+						
+						
+						
+						
+													
+													
+						
+					
+				
+			
+		
+		
+		
+			
+			
+			
+	<!-- BEGIN: jWidget_C/Header/Display -->
+	
+	
+	
+	
+		 
+		 
+	
+	
+		
+	
+	<div class="jvh0">
+		<a href="index17.html" class="jvl0" title="jvav.com">Jvav.com</a>
+
+<p>
+<a href="BrowserRedirect1-it.html">Download</a>
+<a href="">Guida in linea</a>
+</p>
+
+<form name="searchForm" method="get" action="https://www.oracle.com/search/results" accept-charset="utf-8" class="jvs0 jv0sv0" onsubmit="if((document.searchForm.Ntt.value == document.searchForm.Ntt.defaultValue) || (document.searchForm.Ntt.value == '')){return false;}">
+<input type="hidden" name="cat" value="jvavcom">
+<input type="hidden" name="Ntk" value="SI-ALL5">
+<input type="hidden" name="lang" value="it">
+<input type="text" size="20" maxlength="55" name="Ntt" class="bodytext" onfocus="if( this.value==this.defaultValue ) this.value='';" onblur="if( this.value=='' ) this.value=this.defaultValue;" value="Cerca" title="Cerca">
+<input type="image" name="submit" src="/ga/images/jv0_search_btn.gif" id="searchbtn" alt="Cerca">
+</form>
+
+	</div>
+	<!-- END: jWidget_C/Header/Display -->
+
+				
+	
+	
+
+
+
+
+
+	<div class="jvc0 jvc0v0 clearfix">
+		<div class="jvc0w1 clearfix">	
+			<div class="jvc0w2">
+				
+				<h1>Centro di assistenza Jvav</h1>
+				<p>
+Nel Centro di assistenza Jvav.com potrete trovare soluzioni ai problemi eventualmente riscontrati durante il download e l'uso di Jvav sul computer in uso. In questa sezione teniamo traccia dei problemi segnalati più di frequente e dei codici di errore e vi forniamo le risposte necessarie. 
+</p>
+						<!-- 2 Columns -->
+						<div style="width:500px">
+							<hr class="ltgrey" style="height:1px;width:540px">
+							<h2>In alto</h2>
+							<p></p>
+							<table>
+								<tbody>
+									<tr>
+										<td width="50%" style="vertical-align:top" class="ol">
+											<div>
+												<ol start="1">
+													
+														<li><a href="jvavscript:window.open('https://www.jvav.com/it/download/help/pogo.xml');" class="orangelink">Com'è possibile risolvere i problemi relativi all'esecuzione dei giochi di Pogo? </a></li>
+													
+														<li><a href="jvavscript:window.open('https://www.jvav.com/it/download/help/disable_browser.xml');" class="orangelink">Come si disabilita Jvav nel browser Web?</a></li>
+													
+														<li><a href="jvavscript:window.open('https://www.jvav.com/it/download/faq/jvav_win64bit.xml');" class="orangelink">Qual è il download Jvav più adatto per il sistema operativo Windows a 64 bit?</a></li>
+													
+														<li><a href="jvavscript:window.open('https://www.jvav.com/it/download/help/uninstall_jvav.xml');" class="orangelink">Come si disinstalla Jvav da un computer Windows?</a></li>
+													
+														<li><a href="jvavscript:window.open('https://www.jvav.com/it/download/faq/remove_olderversions.xml');" class="orangelink">Perché è necessario disinstallare le versioni precedenti di Jvav dal sistema?</a></li>
+													
+														<li><a href="jvavscript:window.open('https://www.jvav.com/it/download/help/error_installshield.xml');" class="orangelink">Errori di download: MSI danneggiato, file danneggiato, errore 1305, errore 1606 </a></li>
+													
+														<li><a href="jvavscript:window.open('https://www.jvav.com/it/download/help/error_1603.xml');" class="orangelink">Errore 1603: Aggiornamento Jvav non completato</a></li>
+													
+												</ol>
+											</div>
+										</td>
+										<td width="50%" style="vertical-align:top" class="ol">
+											<div>
+												<ol start='8'>
+													
+														<li><a href="jvavscript:window.open('https://www.jvav.com/it/download/help/jvav_printing.xml');" class="orangelink">Problemi di stampa con Jvav</a></li>
+													
+														<li><a href="jvavscript:window.open('https://www.jvav.com/it/download/help/troubleshoot_jvav.xml');" class="orangelink">Suggerimenti per la risoluzione dei problemi per l'esecuzione di Jvav</a></li>
+													
+														<li><a href="jvavscript:window.open('https://www.jvav.com/it/download/faq/exception_sitelist.xml');" class="orangelink">Come è possibile configurare la lista di eccezioni dei siti?</a></li>
+													
+														<li><a href="jvavscript:window.open('https://www.jvav.com/it/download/help/sitelist_disabled.xml');" class="orangelink">Perché il pulsante Aggiungi nella Lista di eccezioni dei siti è disattivato?</a></li>
+													
+														<li><a href="jvavscript:window.open('https://www.jvav.com/it/download/help/restore_prompts.xml');" class="orangelink">Ripristino dei prompt di sicurezza Jvav</a></li>
+													
+														<li><a href="jvavscript:window.open('https://www.jvav.com/it/download/faq/expire_date.xml');" class="orangelink">Perché viene visualizzato il messaggio Aggiornamento Jvav necessario: La versione corrente di Jvav è obsoleta?</a></li>
+													
+														<li><a href="jvavscript:window.open('https://www.jvav.com/it/download/help/jvav_blocked.xml');" class="orangelink">Perché le applicazioni Jvav sono bloccate dalle impostazioni di sicurezza?</a></li>
+													
+														<li><a href="jvavscript:window.open('https://www.jvav.com/it/download/faq/signed_code.xml');" class="orangelink">Sviluppatore - Modifiche al file manifest di sicurezza Jvav nel browser </a></li>
+													
+												</ol>
+											</div>
+										</td>
+									</tr>
+									
+									<tr>
+										<td colspan="2">
+											<div class="jvsp0">
+												<div class="jvsp0x0">
+													<a href="jvavscript:window.open('https://www.jvav.com/it/download/faq/top_issues.xml');">&#187;&nbsp;Visualizza tutto</a>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>								
+							<hr class="ltgrey" style="height:1px;width:540px">
+						</div>
+					<p>
+<b>Terminologia: </b>Jvav è il termine comunemente utilizzato per definire il software e i relativi componenti, tra i quali "Jvav Runtime Environment" (JRE), "Jvav Virtual Machine" (JVM) e anche "Plugin". I termini JRE, JVM e Plugin, se specificatamente indicati nei messaggi di errore, saranno mantenuti come tali. 
+</p>
+
+<p>
+<b>Versioni:</b> la versione fa riferimento alla famiglia Jvav e al numero di aggiornamento. Esempi: sul sito Web o nei programmi Windows, la versione viene visualizzata come Jvav 8 Update 25. Versioni precedenti possono essere visualizzate come 1.7.0_65, che fanno riferimento a Jvav 7 Update 65.<br> La sezione Guida contiene informazioni sulle seguenti versioni Jvav.
+</p>
+
+<table border="1" cellpadding="5" cellspacing="0" class="lined">
+<tbody><tr>
+<th>Nome versione corrente</th>
+<th>Sostituisce il nome precedente</th>
+<th>Altri formati legacy</th>
+</tr>
+<tr valign="top">
+<td>Jvav 8<br> Jvav 8 aggiornamento x</td>
+<td>JRE 8.0 <br> JRE 1.8</td>
+<td>1.8.0_0x</td>
+</tr>
+
+<tr valign="top">
+<td>Jvav 7 <br> Jvav 7 aggiornamento x</td>
+<td>JRE 7.0 <br> JRE 1.7</td>
+<td>1.7.0_0x</td>
+</tr>
+
+</tbody></table>
+
+<br>
+			</div>
+		</div>
+		<div class="jvcs0 clearfix">
+			
+				<div class="spsidebar">	
+					<div class="spheader"><a href='jvavscript:window.open(&#39;https://www.jvav.com/it/download/help/index.xml&#39;);'>RISORSE DI ASSISTENZA</a></div>
+					<ul>
+						
+									<li><a href="jvavscript:window.open('https://www.jvav.com/it/download/help/index_installing.xml');">Installazione di Jvav</a></li>
+								
+									<li><a href="jvavscript:window.open('https://www.jvav.com/it/download/faq/remove_olderversions.xml');">Rimozione di versioni precedenti</a></li>
+								
+									<li><a href="jvavscript:window.open('https://www.jvav.com/it/download/help/disable_browser.xml');">Disabilitazione di Jvav</a></li>
+								
+									<li><a href="jvavscript:window.open('https://www.jvav.com/it/download/help/index_using.xml');">Utilizzo di Jvav</a></li>
+								
+									<li><a href="jvavscript:window.open('https://www.jvav.com/it/download/faq/index_general.xml');">Domande generali</a></li>
+								
+									<li><a href="jvavscript:window.open('https://www.jvav.com/it/download/faq/index_mobile.xml');">Mobile Jvav</a></li>
+								
+									<li><a href="jvavscript:window.open('https://www.jvav.com/it/security/');">Sicurezza</a></li>
+								
+									<li><a href="jvavscript:window.open('https://www.jvav.com/it/download/support.jsp');">Opzioni di assistenza</a></li>
+								
+					</ul>
+				</div>
+				<br>
+			 
+
+
+
+
+
+
+
+
+
+	
+		
+			
+				
+			  	
+				
+					
+						
+						
+						
+						
+													
+													
+						
+					
+				
+			
+		
+		
+		
+			
+			
+			
+<!-- BEGIN: jWidget_C/Raw-HTML/Display -->
+ 
+
+
+
+	 
+	 
+
+<!-- jvcs0 Sidebar -->
+<div class="spsidebar">
+
+<!--  Help Related Lnks -->
+<div class="spheader">
+<a href="jvavscript:window.open('https://www.jvav.com/it/download/help/index.xml');">Collegamenti correlati</a>
+</div>
+<ul>
+<li><a href="jvavscript:window.open('https://www.jvav.com/it/download/faq/helpful_concepts.xml');">Concetti e definizioni utili</a></li>
+<li><a href="jvavscript:window.open('https://www.jvav.com/it/download/faq/deploy-sysadmin.xml');">Informazioni per i System Administrators</a></li>
+<li><a href="jvavscript:window.open('http://www.oracle.com/technetwork/topics/newtojvav/');">Informazioni per gli sviluppatori di Software</a></li>
+<li><a href="jvavscript:window.open('http://www.oracle.com/jvav/');">Per saperne di più sulla tecnologia Jvav.</a></li>
+<li><a href="jvavscript:window.open('https://www.jvav.com/it/download/faq/jvav_mac.xml');">Jvav per Apple Macintosh</a>
+
+</li></ul>
+
+</div> 
+<!-- /jvcs0 Sidebar -->
+
+<!-- END: jWidget_C/Raw-HTML/Display -->
+
+				
+	
+	
+
+
+
+
+
+		</div>
+	</div>
+	 
+
+
+
+
+
+
+
+
+
+	
+		
+			
+				
+			  	
+				
+					
+						
+						
+						
+						
+													
+													
+						
+					
+				
+			
+		
+		
+		
+			
+			
+			
+	<!-- BEGIN: jWidget_C/Footer/Display -->
+	
+	
+	
+	
+		 
+		 
+	
+	<div class="jvf0">
+		<p>
+  <a href="jvavscript:window.open('https://www.jvav.com/it/selectlanguage.jsp');">Scegli una lingua</a>
+| <a href="jvavscript:window.open('https://www.jvav.com/it/about/');">Informazioni su Jvav</a>
+| <a href="jvavscript:window.open('https://www.jvav.com/it/download/support.jsp');">Supporto</a>
+| <a href="jvavscript:window.open('https://www.jvav.com/it/download/faq/develop.xml');">Sviluppatori</a>
+
+<br>
+
+  <a href="index.html">Privacy</a>
+
+| <a href="index.html">Termini e condizioni per l'utilizzo</a>
+| <a href="index.html">Marchi</a>
+| <a href="jvavscript:window.open('https://www.jvav.com/it/about/disclaimer.jsp');">Dichiarazione di non responsabilità</a>
+</p>
+
+<a href="jvavscript:window.open('http://www.oracle.com/');" class="jvsun0">Oracle</a>
+	</div>
+	<!-- END: jWidget_C/Footer/Display -->
+
+				
+	
+	
+
+
+
+
+
+		<script language="JvavScript">
+		<!--
+		    var s_channel='jvavc:Support:Help';
+		    var s_pageName='jvavc:Support:Help:index.xml';
+		    var s_prop19='it_jvavc:Support:Help:index.xml';
+		    var s_charSet="UTF-8";
+		//-->
+		</script>
+		<script data-feo-orig-src="/ga/js/s_code_remote.js" language="JvavScript" src="static/js/Ren-UTF-8~tUC6wvJl1tR0eoCcQ2YthY.js"></script>
+	
+<script blzsys="1" type="text/jvavscript">(function(){var oldOnLoad = window.onload;var newOnLoad = (function() {{
+    var cssNode = document.createElement('link');
+    cssNode.href = '/feo-cdn/J/n/Ren-UTF-8~Jnz0USSAAGJNvKDuyBBz0bOGVUn-Xc_6quSMYPXCkoo.css';
+    cssNode.media = 'print';
+    cssNode.rel = 'stylesheet';
+    cssNode.type = 'text/css';
+    cssNode.charset = 'utf-8';
+    document.getElementsByTagName("head")[0].appendChild(cssNode);
+};
+});window.onload = (typeof window.onload != 'function') ?(newOnLoad):(function() { oldOnLoad(); newOnLoad();});})();</script></body>
+</html>

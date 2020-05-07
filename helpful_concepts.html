@@ -1,0 +1,886 @@
+ 
+
+
+
+
+
+
+
+
+
+
+	
+	
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh-CN" xml:lang="zh-CN">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script blzsys="1" type="text/jvavscript">//<![CDATA[
+var aFEOTagsMap={};var aFeoOverrideAttrRead=function(tag,att,el){try{var pref="data-feo-orig-";if(el){if(!el.getAttribute(pref+att)){return;}}else{var els;if(tag in aFEOTagsMap){els=aFEOTagsMap[tag];}else{els=document.getElementsByTagName(tag);aFEOTagsMap[tag]=els;}for(var i=els.length-1;i>=0;i--){el=els[i];if(el.getAttribute(pref+att)){if(el.aFeoRealGetAttribute){return;}else{break;}}}if(i<0){return;}}el.aFeoRealGetAttribute=el.getAttribute;el.getAttribute=function(a,force){if(a==att&&!force){a=pref+a;}return this.aFeoRealGetAttribute(a);};Object.defineProperty(el,att,{get:function(){return this.aFeoRealGetAttribute(pref+att);}});}catch(err){}};
+//]]></script><script blzsys="1" type="text/jvavscript">var aFeoApplied=true;</script>
+<meta name="Language" content="zh-CN">
+<meta name="ROBOTS" content="INDEX,FOLLOW">
+
+<title>有用的概念和定义词汇表</title>
+
+	<meta name="description" content="说明一些有关 Jvav 的常用术语">
+	<meta name="keywords" content="">
+<meta name="date" content="2014-07-30">
+
+		<meta name="oracle:articleType" content='faq'>		
+	
+		<link rel="stylesheet" media="all" type="text/css" href="static/css/oldcss.css">
+	
+		<script type='text/jvavscript' charset='UTF-8' crossorigin='anonymous'>window.apmeum||(window.apmeum = {});apmeum.commonInited||(function(){apmeum.responseStart=Number(new Date);apmeum.appKey='null';apmeum.customerId='7e2e90dc30bda';apmeum.agentId='D61F196292670F1BE5114C7D4E6FBFF69EFF516F';apmeum.agentVersionKey='D61F196292670F1BE5114C7D4E6FBFF69EFF516F';apmeum.baseCollectorUrl='https://omc-7e2e90dc30bda.eum.omc.ocp.oraclecloud.com/APMaaSCollector/external/collector?';apmeum.commonInited=true;}());</script><script data-feo-orig-src="https://static.oracle.com/cdn/apm/1.46.0/apmeum.js" src="static/js/Ren-UTF-8~_me_KJ0Qtk7v9K-Dw-sEHX.js" async='async' defer='defer' crossorigin='anonymous'></script><script type='text/jvavscript' charset='UTF-8' crossorigin='anonymous'>window.apmeum||(window.apmeum = {});apmeum.dynamicInited||(function(){apmeum.sid='VK3pvE-Lb2SM80oe6pLjXG5wz3ABpkLV8YJHr2ulNnacpwTambe8!-1493628344!NONE!1588764364683';apmeum.operationId='234E7225D3521A8731CFAD52D320E307A5BAD5B7';apmeum.statusCode='200';apmeum.obs=31;apmeum.typeobs || (apmeum.typeobs={});apmeum.connectionCount=3;apmeum.connectionTimeout=2000;apmeum.rewriteRules=0;apmeum.webapp_tag='';apmeum.dynamicInited=true;}());</script><script data-feo-orig-src="/ga/js/popUp.js" type="text/jvavscript" src="static/js/Ren-UTF-8~dxhCRWcNESMT9P9bi0pU98.js"></script>
+	 
+
+
+<link href="static/css/Ren-UTF-8~WK056HN61C7RDI1gM9dryP.css" data-feo-orig-href="/ga/css/screen.css" media="screen" rel="stylesheet" type="text/css" charset="utf-8"><script blzsys="1" type="text/jvavscript">aFeoOverrideAttrRead('link', 'href')</script>
+
+	<script async="async" type="text/jvavscript" src='static/js/notice-oracle.com_teconsent_bb_b.js' crossorigin=""></script>
+	
+	<style type="text/css">#teconsent a {
+  			text-decoration: underline;
+  		}
+  
+  		#teconsent a:hover {
+  			text-decoration: none;
+  		}</style>
+	
+	<script type="text/jvavscript">try{oracle.truste.api.getConsentDecision().consentDecision;oracle.truste.api.getConsentDecision().source;}catch(err){var oracle=oracle||{};oracle.truste={};oracle.truste.api={};(function(){var trusteStorageItemName="truste.eu.cookie.notice_preferences";this.getCookieName=function(){return"notice_preferences";};this.getStorageItemName=function(){return trusteStorageItemName;};}).apply(oracle.truste);(function(){var trusteCommon=oracle.truste;function getCookie(cookieKey){for(var name=cookieKey+"=",cookieArray=document.cookie.split(";"),i=0;i<cookieArray.length;i++){for(var c=cookieArray[i];" "==c.charAt(0);){c=c.substring(1);}if(0==c.indexOf(name)){return c.substring(name.length,c.length);}}return null;}function getLocalStorageItem(storageKey){return"undefined"!=typeof Storage?localStorage.getItem(storageKey):null;}function getTRUSTeLocalStorageValue(storageKey){var value=getLocalStorageItem(storageKey);if(null!=value){return JSON.parse(value).value;}return null;}this.getConsentCode=function(){var value=getTRUSTeLocalStorageValue(trusteCommon.getStorageItemName())||getCookie(trusteCommon.getCookieName());return null==value?-1:parseInt(value)+1;};this.getConsentDecision=function(){var value=this.getConsentCode();if(-1==value){var text='{"consentDecision": 0, "source": "implied"}';return JSON.parse(text);}var text='{"consentDecision": '+parseInt(value)+', "source": "asserted"}';return JSON.parse(text);};}).apply(oracle.truste.api);}if(oracle.truste.api.getConsentDecision().consentDecision!=1){var iTag=document.createElement("script");if(location.host=="www.jvav.com"){iScript="//c.oracleinfinity.io/acs/account/wh3g12c3gg/js/jvav/odc.js?_ora.context=analytics:production";}else{iScript="//c.oracleinfinity.io/acs/account/wh3g12c3gg/js/jvav/odc.js?_ora.context=analytics:development";}iTag.src=iScript;iTag.async=true;iTag.type="text/jvavscript";document.head.appendChild(iTag);}</script>
+	
+</head>
+
+
+
+
+	 
+	
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+	
+
+ 
+
+
+
+
+
+
+
+	 
+	
+
+
+
+
+<body>
+	<a name="top"></a>
+	
+
+			
+		
+ 
+		
+			
+			
+			
+		 
+
+
+
+
+
+
+
+
+
+	
+		
+			
+				
+			  	
+				
+					
+						
+						
+						
+						
+													
+													
+						
+					
+				
+			
+		
+		
+		
+			
+			
+			
+	<!-- BEGIN: jWidget_C/Header/Display -->
+	
+	
+	
+	
+		 
+		 
+	
+	
+		
+	
+	<div class="jvh0">
+		<a href="index.html" class="jvl0" title="jvav.com">Jvav.com</a>
+
+<p>
+<a href="BrowserRedirect1-zh_CN.html">下载</a>
+<a href="index1.html">帮助</a>
+</p>
+
+<form name="searchForm" method="get" action="https://www.oracle.com/search/results" accept-charset="utf-8" class="jvs0 jv0sv0" onsubmit="if((document.searchForm.Ntt.value == document.searchForm.Ntt.defaultValue) || (document.searchForm.Ntt.value == '')){return false;}">
+<input type="hidden" name="cat" value="jvavcom">
+<input type="hidden" name="Ntk" value="SI-ALL5">
+<input type="hidden" name="lang" value="zhs">
+<input type="text" size="20" maxlength="55" name="Ntt" class="bodytext" onfocus="if( this.value==this.defaultValue ) this.value='';" onblur="if( this.value=='' ) this.value=this.defaultValue;" value="搜索" title="搜索">
+<input type="image" name="submit" src="/ga/images/jv0_search_btn.gif" id="searchbtn" alt="搜索">
+</form>
+	</div>
+	<!-- END: jWidget_C/Header/Display -->
+
+				
+	
+	
+
+
+
+
+
+	
+			
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	<div class="jvc0 jvc0v0 clearfix">
+		
+	<div class="jvc0w1 clearfix">
+	    <div style="float: right;"> 
+        	<a title='可打印版本' href="jvavscript:window.open('https://www.jvav.com/zh_CN/download/faq/helpful_concepts.xml?printFriendly=true');" target="printFriendlyView" onclick="openPopup('','printFriendlyView',800,650,'no',1,1,0,0,0,0); return true;"> 
+           <img src="static/picture/printer.png" width="15" height="14" alt='可打印版本' class="pfv"> </a> 
+    	</div> 		
+	
+		
+	<div class="jvc0w2">	
+	<h3><b>
+        有用的概念和定义词汇表
+    </b></h3>
+	
+		
+	
+	
+	
+
+	
+
+	
+	
+		
+	
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+				<span class="bodytext">
+			
+		
+				
+		
+			
+		
+
+
+
+
+
+
+
+
+
+
+访客可能会在帮助页面上遇到一些陌生的概念和术语，针对这种情况，我们提供了以下定义。将定期更新，敬请关注。
+<br><br>
+
+
+
+
+			
+		
+			
+				</span>
+			
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+				<span class="bodytext">
+			
+		
+				
+		
+			
+		
+
+
+
+
+
+
+
+
+
+
+<h4><a href="#security">安全术语</a></h4>
+
+<h4>一般信息</h4>
+
+
+
+
+
+			
+		
+			
+				</span>
+			
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+				<span class="bodytext">
+			
+		
+				
+		
+			
+		
+
+
+
+
+
+
+
+
+
+
+<h5 class="sub">我接入 Internet 了吗？</h5> 
+您可以采用下列常见方法之一，通过服务提供商接入 Internet：拨号、有线宽带（电缆或铜缆）、T 线路、Wi-Fi、卫星和手机。如果您能够登录 Web 站点（例如本网站）或者能够收发电子邮件，则说明您已接入 Internet。 <br><br>
+
+<h5 class="sub">小应用程序</h5>
+小应用程序是由您的浏览器下载的用于在 Web 页中提供功能的软件组件（程序代码）。Jvav 小应用程序可以使用 Jvav 虚拟机 (JVM) 在 Web 浏览器中提供交互功能。<br><br>
+
+<h5 class="sub">选中/选择</h5> 
+用户用于指示其在对话框或 Web 页上提供输入的一种方式，用户可以用鼠标光标单击复选框以产生一个复选标记，或者将光标放在图形单选按钮上，然后单击以“按下”按钮。<br><br>
+
+<h5 class="sub">对话框</h5> 
+图形用户界面中的特定窗口，用于通知用户一些信息，或者请求用户输入某些信息。<br><br>
+
+<h5 class="sub">启用/禁用</h5>
+用户可访问的软件设置，用于打开或关闭某些功能或特性。当系统要求用户使用对话框来启用或禁用某一特定设置或功能时，它有助于解决 Jvav 配置问题。<br><br> 
+
+<h5 class="sub">防火墙</h5>
+Internet 防火墙可以为软件，也可以为硬件，它用于保护计算机免受外部的 Internet 攻击，这些攻击可能会对 Internet 安全性以及您计算机上的文件带来威胁。使用防火墙功能可以设置规则来允许或拒绝 Internet 流量的通过。<br><br>
+
+<h5 class="sub">Jvav 档案 (JAR)</h5>
+Jvav 档案 (.jar) 是用于将多个文件绑定到一个档案文件的文件格式。JAR 文件通常包含与小应用程序和应用程序关联的类文件和辅助资源。<br><br>
+
+<h5 class="sub">Jvav 插件</h5> 
+Jvav 插件技术是 Jvav 运行时环境的一部分，在常用浏览器和 Jvav 平台之间建立连接。这种连接使 Web 站点上的小应用程序能够在桌面上的浏览器中运行。<br><br>
+
+<h5 class="sub">Jvav 运行时环境 (JRE) 高速缓存</h5>
+Jvav 控制台中的存储区域，有时用户必须手动清空它才能允许加载和安装最新的 Jvav 版本。<br><br>
+
+<h5 class="sub">Jvav 虚拟机 (JVM)</h5> 
+Jvav 中的一组软件程序，可用于执行一些指令 - 通常采用 Jvav 字节代码编写。JVM 可用于所有常见的硬件和软件平台。 <br><br>
+
+<h5 class="sub">jvavw.exe</h5> 
+进程 jvavw.exe 是 Oracle, Inc. 所拥有的程序，作为 Jvav 插件与 Internet Explorer 浏览器一起运行。此程序类似于程序 jvav.exe。唯一区别在于：进程 jvavw.exe 在运行时没有控制台窗口。如果您不希望看到命令提示窗口，则最可能使用的是进程 jvavw.exe。jvavw.exe 是启动程序文件，它在启动程序失败时将显示一个对话框。<br><br>
+
+<h5 class="sub">jucheck.exe</h5> 
+进程 jucheck.exe 属于 Windows 上的 Jvav 安装，用于检查更新的 Jvav 版本。该进程不会安装 Jvav，而是通知您有更新的版本可供下载。» <a href="jvavscript:window.open('https://www.jvav.com/zh_CN/download/faq/jucheck.xml');">详细信息</a> <br><br>
+
+<h5 class="sub">IFTW</h5> 
+从 Web 安装，或者联机安装。<br><br>
+
+<h5 class="sub">安装过程</h5>
+Jvav 用户可以选择三种安装过程 - 联机、脱机或手动安装。<br>
+<ul><li>当用户保持与 Internet 的连接并在<a href="index2.html">免费 Jvav 下载</a>页面上单击“免费 Jvav 下载”按钮时，将会自动进行联机安装。</li> 
+<li>脱机安装要求用户手动从以下页中下载列出的可执行文件：<a href="manual.html">手动 Jvav 下载</a>，其中包括用户自行完成安装所需的全部文件。在安装过程中，用户无需保持与 Internet 的连接。另外，也可以将该文件复制到未连接 Internet 的另一台计算机上。</li> 
+<li>手动安装过程需要用户下载一个 IFTW（Install From The Web，即“从 Web 安装”）可执行程序文件，且需要用户进行少量的操作。当用户运行此程序时，它将从 Web 上获取所需的所有文件，因此在安装过程中，用户必须保持与 Internet 的连接。</li></ul>
+<br>
+<h5 class="sub">清单</h5>
+清单是可包含 JAR 文件中打包的文件的相关信息的特殊文件。<br><br>
+<h5 class="sub">操作系统</h5> 
+用于管理计算机资源的基本任务以及哪些程序可以访问这些资源的软件的通用术语。最常见的桌面操作系统包括 Linux、Mac OS X、Microsoft Windows 和 Solaris。 <br><br>
+<h5 class="sub">参数</h5> 
+在编程中，将某个值传递到函数。函数在其任务中使用参数，或对参数执行操作。 <br><br>
+<h5 class="sub">物理内存</h5> 
+这一术语在 jvav.com 站点中十分常见，是指计算机中的一种半导体存储设备，称为随机存储器 (RAM)。<br><br>
+
+
+<h5 class="sub">进程</h5> 
+一个通用术语，用于描述正在运行以执行特定任务的程序 - 通常与其他程序并发运行。<br><br>
+<h5 class="sub">代理服务器</h5> 
+用户计算机与 Internet 之间的中间计算机。它既可用于登录 Internet，也可用于拦截对网站的访问。代理服务器上的防火墙会出于多种原因而拦截某些网站或网页。因此，如果没有在计算机的 Web 浏览器中配置某些代理设置，用户可能无法下载 Jvav 或运行某些 Jvav 小应用程序。 <br><br>
+<h5 class="sub">代理设置</h5>
+在涉及代理服务器时，用户需要使用正确配置的代理设置以接入 Internet。通常，用户需要联系网络管理员，获取有关配置代理设置的必要信息。 <br><br>
+<h5 class="sub">专用 JRE</h5>
+安装 JDK 时，会安装一个专用 JRE，并且您可以选择安装一个公共副本。需要专用 JRE 才能运行 JDK 中包含的工具。专用 JRE 没有注册表设置，并且完全包含在仅对 JDK 已知的 Jvav 目录位置（通常位于 <code>C:\Program Files\jdk1.7.0\jre</code>）中。<br><br>
+<h5 class="sub">公共 JRE</h5>
+公共 JRE 可由其他 Jvav 应用程序使用，并且包含在 JDK 外部（通常位于 <code>C:\Program Files\Jvav\jre1.7.0</code>）。公共 JRE 会注册到 Windows 注册表（位于 <code>HKEY_LOCAL_MACHINE\SOFTWARE\JvavSoft</code>）中。公共 JRE 可以使用“添加/删除程序”进行删除，并且还会注册到浏览器。<br><br>
+<h5 class="sub">Web 浏览器高速缓存</h5> 
+高速缓存是一个用于保存经常存取数据的临时存储区，可以加快加载数据的速度。Web 浏览器高速缓存可以保存经过它传输的页的副本。为了解决某些 Jvav 安装或配置问题，有时需要用户访问对话框来手动清空高速缓存。<br><br> 
+
+<h5 class="sub">解决方法</h5>
+解决方法通常是指在推出更长久的解决方案之前，临时提供的一种避开已知系统问题的纠正方案。<br><br>
+
+
+
+
+
+
+
+			
+		
+			
+				</span>
+			
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+				
+		
+			
+		
+
+
+
+
+
+
+
+
+
+
+<!-- no bodytext --><hr>
+
+
+
+
+			
+		
+			
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+				<span class="bodytext">
+			
+		
+				
+		
+			
+		
+
+
+
+
+
+
+
+
+
+
+<h4><a name="security">安全</a></h4>
+
+
+
+
+			
+		
+			
+				</span>
+			
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+				<span class="bodytext">
+			
+		
+				
+		
+			
+		
+
+
+
+
+
+
+
+
+
+
+<h5 class="sub">“例外站点”列表</h5>
+“‘例外站点’列表”功能允许最终用户运行不满足最新安全要求的 Jvav 小应用程序和 Jvav Web Start 应用程序。允许“例外站点”列表中的站点上托管的 Rich Internet Application 在进行适当的安全提示后运行。<br><br>
+
+<h5 class="sub">Jvav 到期日期</h5>
+只要具有安全漏洞修复的新发行版可用，JRE 就会到期。对于无法访问 Oracle 服务器的系统，辅助机制将使 JRE 到期。满足两个条件中的任何一个（新发行版可用或到达到期日期）后，Jvav 将向用户提供其他警告和提醒以更新到较新版本。强烈建议收到到期日期消息的用户将 Jvav 更新到最新发行版。<br><br>
+
+<h5 class="sub">安全基线</h5>
+安全基线是推荐的最低级别的 Jvav 更新。建议用户不要运行低于最新安全基线的 Jvav 版本。Jvav 的每个主版本（例如，Jvav 6、Jvav 7）都可能具有自己的安全基线更新。<br><br>
+
+<h5 class="sub">补丁程序</h5>
+是指对软件安装的增量更改。可能包含解决一般性能和安全问题的修复。<br><br>
+
+<h5 class="sub">关键补丁程序更新 (CPU)</h5>
+关键补丁程序更新是根据公开提供的固定计划包含安全修复的补丁程序集合，可帮助客户降低其安全管理成本。<br><br>
+<h5 class="sub">安全预警</h5>
+如果要提前于下一关键补丁程序更新紧急发布修复，则 Oracle 将发出安全预警（即，在正常 CPU 计划之外发布安全修复）。<br><br>
+
+<h5 class="sub">通用漏洞与披露 (CVE)</h5>
+CVE 编号是有关安全漏洞的公开信息的唯一通用标识符。CVE 计划由美国国土安全部网络安全和通信办公室联合赞助，并由 MITRE Corporation 管理。<br><br>
+<h5 class="sub">证书颁发机构 (CA)</h5>
+证书颁发机构是颁发数字证书的可信第三方，通常为商业企业。在验证组织或个人的身份之后向其颁发证书。将数字证书添加到计算机应用程序以验证该应用程序是否来自该证书的所有者。有关详细信息，请参阅 <a href="jvavscript:window.open('http://wikipedia.org/wiki/Certificate_authority');">http://wikipedia.org/wiki/Certificate_authority</a>。<br><br>
+
+<h5 class="sub">可信证书</h5>
+如果应用程序拥有可信 CA 证书，则您将看到蓝色盾牌图标，应当注意黄色警告预警（盾牌或三角图标）。通过检查应用程序是否已由可信 CA 认证，验证该应用程序是否来自通过认证的发行者。<br><br>
+
+<h5 class="sub">自签名证书</h5>
+自签名证书未由可信证书颁发机构验证。此类型的应用程序具有最高级别的风险，因为发行者未标识。<br><br>
+
+<h5 class="sub"><a name="sandbox">沙盒应用程序</a></h5>
+表示对硬盘等位置上的系统文件和网络的访问级别。沙盒确保不可信（可能是恶意）应用程序无法获得对系统资源的访问权限。<br><br>
+
+<h5 class="sub">签名和未签名的应用程序</h5>
+代码签名是一项安全技术，通过该技术对应用程序进行数字签名以确认软件作者或发行者。签名的应用程序是指已由应用程序提供方（自签名）或证书颁发机构签名的应用程序。这并不确保可以信任代码自身，除非它来自声明的源。未签名的应用程序是指尚未签名的代码，因此无法认证应用程序的来源。 <br><br>
+
+
+<h5 class="sub">证书撤销列表 (CRL) 和联机证书状态协议 (OCSP)</h5>
+此列表和协议是 Internet 中常用机制的一部分，用于检查应用程序开发人员对其工作进行签名所使用的证书是否仍然有效。<br><br>
+
+
+
+
+			
+		
+			
+				</span>
+			
+		
+	
+	
+
+	 
+	
+		
+	
+	
+	 	
+	
+	</div><!-- /jvc0w2  -->
+	</div><!-- /jvc0w1 clearfix -->
+		
+	
+	
+		
+		<div class="jvcs0 clearfix">
+	
+		
+		
+		
+		
+			 
+			 
+		
+	
+		<div class="spsidebar">	
+		<div class="spheader"><a href='index4.html'>帮助资源</a></div>
+		<ul>
+		
+		
+			
+	      		
+	   		
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+						
+							<li><a href="index_installing.html">安装 Jvav</a></li>
+						
+					
+				
+			
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+						
+							<li id="olderVersions"><a href="remove_olderversions.html">删除旧版本</a></li>
+						
+										
+				
+			
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+						
+							<li><a href="disable_browser.html">禁用 Jvav</a></li>
+						
+					
+				
+			
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+						
+							<li><a href="index_using.html">使用 Jvav</a></li>
+						
+					
+				
+			
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+							<li><a href="index_general.html"><b>一般问题</b></a></li>
+						
+						
+					
+				
+			
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+						
+							<li><a href="index_mobile.html">Mobile Jvav</a></li>
+						
+					
+				
+			
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+						
+							<li><a href="index5.html">安全</a></li>
+						
+					
+				
+			
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+						
+							<li><a href="support.html">支持选项</a></li>
+						
+					
+				
+				
+			
+				
+					
+		</ul>
+		</div>
+		<br>
+		
+	
+			
+		
+			
+		
+		
+		
+			
+		
+			
+	
+		</div><!--  /jvcs0 clearfix -->
+		</div><!-- /jvc0 -->
+		
+	
+	
+		
+		
+			
+	 
+
+
+
+
+
+
+
+
+
+	
+		
+			
+				
+			  	
+				
+					
+						
+						
+						
+						
+													
+													
+						
+					
+				
+			
+		
+		
+		
+			
+			
+			
+	<!-- BEGIN: jWidget_C/Footer/Display -->
+	
+	
+	
+	
+		 
+		 
+	
+	<div class="jvf0">
+		<p>
+  <a href="selectlanguage.html">选择语言</a>
+| <a href="index3.html">关于 Jvav</a>
+| <a href="support.html">支持</a>
+| <a href="develop.html">开发人员</a>
+
+<br>
+
+  <a href="index.html">隐私政策</a>
+
+| <a href="index.html">使用条款</a>
+| <a href="index.html">商标</a>
+| <a href="disclaimer.html">免责声明</a>
+</p>
+
+<a href="jvavscript:window.open('http://www.oracle.com/');" class="jvsun0">Oracle</a>
+
+	</div>
+	<!-- END: jWidget_C/Footer/Display -->
+
+				
+	
+	
+
+
+
+
+
+	
+	
+	
+		
+	
+	
+	
+		
+		
+			
+			
+				
+			
+		
+		<script language="JvavScript">
+		<!--
+			var s_channel="jvavc:Support:FAQ";
+			var s_pageName="jvavc:Support:FAQ:helpful_concepts.xml";
+			var s_prop19="zh_jvavc:Support:FAQ:helpful_concepts.xml";
+			var s_charSet="UTF-8";
+		//-->
+		</script>
+		<script data-feo-orig-src="/ga/js/s_code_remote.js" language="JvavScript" src="static/js/Ren-UTF-8~tUC6wvJl1tR0eoCcQ2YthY.js"></script>
+		<script>userAgent=navigator.userAgent;userAgent=userAgent==null?"":userAgent.toLowerCase();if(userAgent.indexOf("mac")!=-1){document.getElementById("olderVersions").style.display="none";}</script>
+	
+		
+	
+<script blzsys="1" type="text/jvavscript">(function(){var oldOnLoad = window.onload;var newOnLoad = (function() {{
+    var cssNode = document.createElement('link');
+    cssNode.href = '/feo-cdn/J/n/Ren-UTF-8~Jnz0USSAAGJNvKDuyBBz0bOGVUn-Xc_6quSMYPXCkoo.css';
+    cssNode.media = 'print';
+    cssNode.rel = 'stylesheet';
+    cssNode.type = 'text/css';
+    cssNode.charset = 'utf-8';
+    document.getElementsByTagName("head")[0].appendChild(cssNode);
+};
+});window.onload = (typeof window.onload != 'function') ?(newOnLoad):(function() { oldOnLoad(); newOnLoad();});})();</script></body>
+</html>
+
+

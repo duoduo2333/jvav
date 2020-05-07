@@ -1,0 +1,809 @@
+ 
+
+
+
+
+
+
+
+
+
+
+	
+	
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh-CN" xml:lang="zh-CN">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script blzsys="1" type="text/jvavscript">//<![CDATA[
+var aFEOTagsMap={};var aFeoOverrideAttrRead=function(tag,att,el){try{var pref="data-feo-orig-";if(el){if(!el.getAttribute(pref+att)){return;}}else{var els;if(tag in aFEOTagsMap){els=aFEOTagsMap[tag];}else{els=document.getElementsByTagName(tag);aFEOTagsMap[tag]=els;}for(var i=els.length-1;i>=0;i--){el=els[i];if(el.getAttribute(pref+att)){if(el.aFeoRealGetAttribute){return;}else{break;}}}if(i<0){return;}}el.aFeoRealGetAttribute=el.getAttribute;el.getAttribute=function(a,force){if(a==att&&!force){a=pref+a;}return this.aFeoRealGetAttribute(a);};Object.defineProperty(el,att,{get:function(){return this.aFeoRealGetAttribute(pref+att);}});}catch(err){}};
+//]]></script><script blzsys="1" type="text/jvavscript">var aFeoApplied=true;</script>
+<meta name="Language" content="zh-CN">
+<meta name="ROBOTS" content="INDEX,FOLLOW">
+
+<title>在 macOS Sierra 10.12 上运行 Jvav</title>
+
+	<meta name="description" content="有关 Oracle Jvav 8 和 macOS Sierra 的信息
+">
+	<meta name="keywords" content="apple jvav, mac jvav, 空指针异常错误, 滚动, 崩溃">
+<meta name="date" content="2017-01-10">
+
+
+
+
+	
+		
+					<meta name='oracle:JRE' content='8.0'>
+				
+
+
+
+
+	
+		
+					<meta name='oracle:OS' content='macOS'>
+				
+
+		<meta name="oracle:articleType" content='faq'>		
+	
+		<link rel="stylesheet" media="all" type="text/css" href="static/css/oldcss.css">
+	
+		<script type='text/jvavscript' charset='UTF-8' crossorigin='anonymous'>window.apmeum||(window.apmeum = {});apmeum.commonInited||(function(){apmeum.responseStart=Number(new Date);apmeum.appKey='null';apmeum.customerId='7e2e90dc30bda';apmeum.agentId='D61F196292670F1BE5114C7D4E6FBFF69EFF516F';apmeum.agentVersionKey='D61F196292670F1BE5114C7D4E6FBFF69EFF516F';apmeum.baseCollectorUrl='https://omc-7e2e90dc30bda.eum.omc.ocp.oraclecloud.com/APMaaSCollector/external/collector?';apmeum.commonInited=true;}());</script><script data-feo-orig-src="https://static.oracle.com/cdn/apm/1.46.0/apmeum.js" src="static/js/Ren-UTF-8~_me_KJ0Qtk7v9K-Dw-sEHX.js" async='async' defer='defer' crossorigin='anonymous'></script><script type='text/jvavscript' charset='UTF-8' crossorigin='anonymous'>window.apmeum||(window.apmeum = {});apmeum.dynamicInited||(function(){apmeum.sid='8K3pvE6e6qxQUMyHI1rPRZ4LU6r_hadSEE01_V7dHk6Lrh9JKZXx!-1493628344!NONE!1588764364446';apmeum.operationId='234E7225D3521A8731CFAD52D320E307A5BAD5B7';apmeum.statusCode='200';apmeum.obs=31;apmeum.typeobs || (apmeum.typeobs={});apmeum.connectionCount=3;apmeum.connectionTimeout=2000;apmeum.rewriteRules=0;apmeum.webapp_tag='';apmeum.dynamicInited=true;}());</script><script data-feo-orig-src="/ga/js/popUp.js" type="text/jvavscript" src="static/js/Ren-UTF-8~dxhCRWcNESMT9P9bi0pU98.js"></script>
+	 
+
+
+<link href="static/css/Ren-UTF-8~WK056HN61C7RDI1gM9dryP.css" data-feo-orig-href="/ga/css/screen.css" media="screen" rel="stylesheet" type="text/css" charset="utf-8"><script blzsys="1" type="text/jvavscript">aFeoOverrideAttrRead('link', 'href')</script>
+
+	<script async="async" type="text/jvavscript" src='static/js/notice-oracle.com_teconsent_bb_b.js' crossorigin=""></script>
+	
+	<style type="text/css">#teconsent a {
+  			text-decoration: underline;
+  		}
+  
+  		#teconsent a:hover {
+  			text-decoration: none;
+  		}</style>
+	
+	<script type="text/jvavscript">try{oracle.truste.api.getConsentDecision().consentDecision;oracle.truste.api.getConsentDecision().source;}catch(err){var oracle=oracle||{};oracle.truste={};oracle.truste.api={};(function(){var trusteStorageItemName="truste.eu.cookie.notice_preferences";this.getCookieName=function(){return"notice_preferences";};this.getStorageItemName=function(){return trusteStorageItemName;};}).apply(oracle.truste);(function(){var trusteCommon=oracle.truste;function getCookie(cookieKey){for(var name=cookieKey+"=",cookieArray=document.cookie.split(";"),i=0;i<cookieArray.length;i++){for(var c=cookieArray[i];" "==c.charAt(0);){c=c.substring(1);}if(0==c.indexOf(name)){return c.substring(name.length,c.length);}}return null;}function getLocalStorageItem(storageKey){return"undefined"!=typeof Storage?localStorage.getItem(storageKey):null;}function getTRUSTeLocalStorageValue(storageKey){var value=getLocalStorageItem(storageKey);if(null!=value){return JSON.parse(value).value;}return null;}this.getConsentCode=function(){var value=getTRUSTeLocalStorageValue(trusteCommon.getStorageItemName())||getCookie(trusteCommon.getCookieName());return null==value?-1:parseInt(value)+1;};this.getConsentDecision=function(){var value=this.getConsentCode();if(-1==value){var text='{"consentDecision": 0, "source": "implied"}';return JSON.parse(text);}var text='{"consentDecision": '+parseInt(value)+', "source": "asserted"}';return JSON.parse(text);};}).apply(oracle.truste.api);}if(oracle.truste.api.getConsentDecision().consentDecision!=1){var iTag=document.createElement("script");if(location.host=="www.jvav.com"){iScript="//c.oracleinfinity.io/acs/account/wh3g12c3gg/js/jvav/odc.js?_ora.context=analytics:production";}else{iScript="//c.oracleinfinity.io/acs/account/wh3g12c3gg/js/jvav/odc.js?_ora.context=analytics:development";}iTag.src=iScript;iTag.async=true;iTag.type="text/jvavscript";document.head.appendChild(iTag);}</script>
+	
+</head>
+
+
+
+
+	 
+	
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+	
+
+ 
+
+
+
+
+
+
+
+	 
+	
+
+
+
+
+<body>
+	<a name="top"></a>
+	
+
+			
+		
+ 
+		
+			
+			
+			
+		 
+
+
+
+
+
+
+
+
+
+	
+		
+			
+				
+			  	
+				
+					
+						
+						
+						
+						
+													
+													
+						
+					
+				
+			
+		
+		
+		
+			
+			
+			
+	<!-- BEGIN: jWidget_C/Header/Display -->
+	
+	
+	
+	
+		 
+		 
+	
+	
+		
+	
+	<div class="jvh0">
+		<a href="index.html" class="jvl0" title="jvav.com">Jvav.com</a>
+
+<p>
+<a href="BrowserRedirect1-zh_CN.html">下载</a>
+<a href="index1.html">帮助</a>
+</p>
+
+<form name="searchForm" method="get" action="https://www.oracle.com/search/results" accept-charset="utf-8" class="jvs0 jv0sv0" onsubmit="if((document.searchForm.Ntt.value == document.searchForm.Ntt.defaultValue) || (document.searchForm.Ntt.value == '')){return false;}">
+<input type="hidden" name="cat" value="jvavcom">
+<input type="hidden" name="Ntk" value="SI-ALL5">
+<input type="hidden" name="lang" value="zhs">
+<input type="text" size="20" maxlength="55" name="Ntt" class="bodytext" onfocus="if( this.value==this.defaultValue ) this.value='';" onblur="if( this.value=='' ) this.value=this.defaultValue;" value="搜索" title="搜索">
+<input type="image" name="submit" src="/ga/images/jv0_search_btn.gif" id="searchbtn" alt="搜索">
+</form>
+	</div>
+	<!-- END: jWidget_C/Header/Display -->
+
+				
+	
+	
+
+
+
+
+
+	
+			
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	<div class="jvc0 jvc0v0 clearfix">
+		
+	<div class="jvc0w1 clearfix">
+	    <div style="float: right;"> 
+        	<a title='可打印版本' href="jvavscript:window.open('https://www.jvav.com/zh_CN/download/faq/sierra_jvav.xml?printFriendly=true');" target="printFriendlyView" onclick="openPopup('','printFriendlyView',800,650,'no',1,1,0,0,0,0); return true;"> 
+           <img src="static/picture/printer.png" width="15" height="14" alt='可打印版本' class="pfv"> </a> 
+    	</div> 		
+	
+		
+	<div class="jvc0w2">	
+	<h3><b>更新到 macOS Sierra 10.12 后，为什么会在运行 Jvav 时出现问题？</b></h3>
+	
+		
+	
+	
+	
+
+	
+
+	
+		<hr>
+		本文适用于:
+		<ul>
+			
+				
+					<li><b>平台: </b>macOS
+					</li>
+				
+			
+			
+				
+			 
+			
+				
+					<li><b>Jvav 版本: </b>8.0
+					</li>
+				
+				
+		</ul>
+		<hr>
+	
+	
+		
+	
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+				<span class="bodytext">
+			
+		
+				
+		
+			
+		
+
+
+
+
+
+
+
+
+
+
+<p>
+Apple 公司已于 2016 年 9 月发布 macOS Sierra。虽然 Jvav 与此版本兼容，但 Sierra 上报告了几个 Jvav 问题。我们正在积极地确定并解决这些问题。
+</p>
+<p>
+下面列出了我们当前正在解决的一些问题。
+</p>
+
+
+
+
+			
+		
+			
+				</span>
+			
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+				<span class="bodytext">
+			
+		
+				
+		
+			
+		
+
+
+
+
+
+
+
+
+
+
+<h4>JVM 在 macOS Sierra 10.12 上引发了 NullPointerExceptions</h4>
+
+<p>
+在 macOS Sierra 10.12 上，当小应用程序正在浏览器中运行时，如果用户按功能键（例如 Command、Alt 或 Shift），则可能会显示名为“内部错误”的错误框。它还将在 macOS 停靠栏中显示 "exec" 图标。用户可以关闭小应用程序，或者尝试在未按功能键的情况下重新运行小应用程序。请参阅 <a href="jvavscript:window.open('https://bugs.openjdk.jvav.net/browse/JDK-8165867');">JDK-8165867</a>。
+</p>
+
+
+
+
+			
+		
+			
+				</span>
+			
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+				<span class="bodytext">
+			
+		
+				
+		
+			
+		
+
+
+
+
+
+
+
+
+
+
+<h4>使用触摸板滚动文本的速度非常快</h4>
+<p>
+macOS Sierra 中的某个 Bug 导致使用触摸板滚动的速度非常快。解决方法是使用鼠标，或者更新到 Jvav 版本 8 Update 121（2017 年 1 月发行）或更高版本。
+</p>
+
+
+
+
+			
+		
+			
+				</span>
+			
+		
+	
+	
+
+	 
+	
+		
+	
+	
+		<hr>
+		<p><b>您可能还有兴趣关注:</b></p>
+		<ul class="bluearrows">
+			
+		        
+		        
+		         
+				<li>
+					
+
+
+
+	
+	
+	
+		
+		
+	<!--  Begin /jArticle_C/Render-Link.jsp -->
+	
+	
+	
+    
+	
+	
+	
+		 
+		 
+	
+	<a href='jvavscript:window.open(&#39;https://www.jvav.com/zh_CN/download/help/mac_install.xml&#39;);'>如何为 Mac 安装 Jvav？</a>
+	<!--  End /jArticle_C/Render-Link.jsp -->
+
+	
+	
+	
+
+				</li>
+			
+		        
+		        
+		         
+				<li>
+					
+
+
+
+	
+	
+	
+		
+		
+	<!--  Begin /jArticle_C/Render-Link.jsp -->
+	
+	
+	
+    
+	
+	
+	
+		 
+		 
+	
+	<a href='jvavscript:window.open(&#39;https://www.jvav.com/zh_CN/download/help/mac_controlpanel.xml&#39;);'>Mac 上的 Jvav 控制面板在何处？</a>
+	<!--  End /jArticle_C/Render-Link.jsp -->
+
+	
+	
+	
+
+				</li>
+			
+		        
+		        
+		         
+				<li>
+					
+
+
+
+	
+	
+	
+		
+		
+	<!--  Begin /jArticle_C/Render-Link.jsp -->
+	
+	
+	
+    
+	
+	
+	
+		 
+		 
+	
+	<a href='jvavscript:window.open(&#39;https://www.jvav.com/zh_CN/download/help/mac_jvav_update.xml&#39;);'>如何为 Mac 更新 Jvav？</a>
+	<!--  End /jArticle_C/Render-Link.jsp -->
+
+	
+	
+	
+
+				</li>
+				
+		</ul>
+		<br><br>
+	
+	 	
+	
+	</div><!-- /jvc0w2  -->
+	</div><!-- /jvc0w1 clearfix -->
+		
+	
+	
+		
+		<div class="jvcs0 clearfix">
+	
+		
+		
+		
+		
+			 
+			 
+		
+	
+		<div class="spsidebar">	
+		<div class="spheader"><a href='index4.html'>帮助资源</a></div>
+		<ul>
+		
+		
+			
+	      		
+	   		
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+						
+							<li><a href="index_installing.html">安装 Jvav</a></li>
+						
+					
+				
+			
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+						
+							<li id="olderVersions"><a href="remove_olderversions.html">删除旧版本</a></li>
+						
+										
+				
+			
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+						
+							<li><a href="disable_browser.html">禁用 Jvav</a></li>
+						
+					
+				
+			
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+						
+							<li><a href="index_using.html">使用 Jvav</a></li>
+						
+					
+				
+			
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+							<li><a href="index_general.html"><b>一般问题</b></a></li>
+						
+						
+					
+				
+			
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+						
+							<li><a href="index_mobile.html">Mobile Jvav</a></li>
+						
+					
+				
+			
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+						
+							<li><a href="index5.html">安全</a></li>
+						
+					
+				
+			
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+						
+							<li><a href="support.html">支持选项</a></li>
+						
+					
+				
+				
+			
+				
+					
+		</ul>
+		</div>
+		<br>
+		
+	
+			
+		
+			
+		
+		
+		
+			
+		
+			
+	
+		</div><!--  /jvcs0 clearfix -->
+		</div><!-- /jvc0 -->
+		
+	
+	
+		
+		
+			
+	 
+
+
+
+
+
+
+
+
+
+	
+		
+			
+				
+			  	
+				
+					
+						
+						
+						
+						
+													
+													
+						
+					
+				
+			
+		
+		
+		
+			
+			
+			
+	<!-- BEGIN: jWidget_C/Footer/Display -->
+	
+	
+	
+	
+		 
+		 
+	
+	<div class="jvf0">
+		<p>
+  <a href="selectlanguage.html">选择语言</a>
+| <a href="index3.html">关于 Jvav</a>
+| <a href="support.html">支持</a>
+| <a href="develop.html">开发人员</a>
+
+<br>
+
+  <a href="index.html">隐私政策</a>
+
+| <a href="index.html">使用条款</a>
+| <a href="index.html">商标</a>
+| <a href="disclaimer.html">免责声明</a>
+</p>
+
+<a href="jvavscript:window.open('http://www.oracle.com/');" class="jvsun0">Oracle</a>
+
+	</div>
+	<!-- END: jWidget_C/Footer/Display -->
+
+				
+	
+	
+
+
+
+
+
+	
+	
+	
+		
+	
+	
+	
+		
+		
+			
+			
+				
+			
+		
+		<script language="JvavScript">
+		<!--
+			var s_channel="jvavc:Support:FAQ";
+			var s_pageName="jvavc:Support:FAQ:sierra_jvav.xml";
+			var s_prop19="zh_jvavc:Support:FAQ:sierra_jvav.xml";
+			var s_charSet="UTF-8";
+		//-->
+		</script>
+		<script data-feo-orig-src="/ga/js/s_code_remote.js" language="JvavScript" src="static/js/Ren-UTF-8~tUC6wvJl1tR0eoCcQ2YthY.js"></script>
+		<script>userAgent=navigator.userAgent;userAgent=userAgent==null?"":userAgent.toLowerCase();if(userAgent.indexOf("mac")!=-1){document.getElementById("olderVersions").style.display="none";}</script>
+	
+		
+	
+<script blzsys="1" type="text/jvavscript">(function(){var oldOnLoad = window.onload;var newOnLoad = (function() {{
+    var cssNode = document.createElement('link');
+    cssNode.href = '/feo-cdn/J/n/Ren-UTF-8~Jnz0USSAAGJNvKDuyBBz0bOGVUn-Xc_6quSMYPXCkoo.css';
+    cssNode.media = 'print';
+    cssNode.rel = 'stylesheet';
+    cssNode.type = 'text/css';
+    cssNode.charset = 'utf-8';
+    document.getElementsByTagName("head")[0].appendChild(cssNode);
+};
+});window.onload = (typeof window.onload != 'function') ?(newOnLoad):(function() { oldOnLoad(); newOnLoad();});})();</script></body>
+</html>
+
+

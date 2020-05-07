@@ -1,0 +1,711 @@
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+    
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh-CN" xml:lang="zh-CN">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="Language" content="zh-CN">
+<meta name="ROBOTS" content="NOINDEX,NOFOLLOW,NOARCHIVE">
+
+<title>Jvav 卸载工具</title>
+
+	<meta name="description" content="Jvav 卸载小应用程序可以卸载 Windows 计算机上的过时版本的 Jvav。">
+	<meta name="keywords" content="JRE 版本，测试 jvav，测试，最新 jvav，测试版本，检验版本，检验">
+<meta name="date" content="2016-02-15">
+
+		<script type='text/jvavscript' charset='UTF-8' crossorigin='anonymous'>window.apmeum||(window.apmeum = {});apmeum.commonInited||(function(){apmeum.responseStart=Number(new Date);apmeum.appKey='null';apmeum.customerId='7e2e90dc30bda';apmeum.agentId='D61F196292670F1BE5114C7D4E6FBFF69EFF516F';apmeum.agentVersionKey='D61F196292670F1BE5114C7D4E6FBFF69EFF516F';apmeum.baseCollectorUrl='https://omc-7e2e90dc30bda.eum.omc.ocp.oraclecloud.com/APMaaSCollector/external/collector?';apmeum.commonInited=true;}());</script><script src='static/js/apmeum.js' async='async' defer='defer' crossorigin='anonymous'></script><script type='text/jvavscript' charset='UTF-8' crossorigin='anonymous'>window.apmeum||(window.apmeum = {});apmeum.dynamicInited||(function(){apmeum.sid='dvLNzlVxh9bxwfw0RiXzMqpDSM4BJ3DW5e3-_trBCeTAmBcFGfX1!-1493628344!NONE!1588295783793';apmeum.operationId='234E7225D3521A8731CFAD52D320E307A5BAD5B7';apmeum.statusCode='200';apmeum.obs=31;apmeum.typeobs || (apmeum.typeobs={});apmeum.connectionCount=3;apmeum.connectionTimeout=2000;apmeum.rewriteRules=0;apmeum.webapp_tag='';apmeum.dynamicInited=true;}());</script><script type="text/jvavscript" src="static/js/popUp.js"></script>
+	 
+
+
+<link rel="stylesheet" href="static/css/screen.css" type="text/css" media="screen" charset="utf-8">
+<link rel="stylesheet" href="static/css/print.css" type="text/css" media="print" charset="utf-8">
+<!--[if IE]><link rel="stylesheet" href="static/css/ie.css" type="text/css" media="screen" charset="utf-8" /><![endif]-->
+
+
+	<script async="async" type="text/jvavscript" src='static/js/notice-oracle.com_teconsent_bb_b.js' crossorigin=""></script>
+	
+	<style type="text/css">
+  		#teconsent a {
+  			text-decoration: underline;
+  		}
+  
+  		#teconsent a:hover {
+  			text-decoration: none;
+  		}
+	</style>
+	
+	<script type="text/jvavscript">
+		try{oracle.truste.api.getConsentDecision().consentDecision;oracle.truste.api.getConsentDecision().source}catch(err){var oracle=oracle||{};oracle.truste={};oracle.truste.api={};(function(){var trusteStorageItemName="truste.eu.cookie.notice_preferences";this.getCookieName=function(){return"notice_preferences"};this.getStorageItemName=function(){return trusteStorageItemName}}).apply(oracle.truste);(function(){var trusteCommon=oracle.truste;function getCookie(cookieKey){for(var name=cookieKey+"=",cookieArray=document.cookie.split(";"),i=0;i<cookieArray.length;i++){for(var c=cookieArray[i];" "==c.charAt(0);)c=c.substring(1);if(0==c.indexOf(name))return c.substring(name.length,c.length)}return null}function getLocalStorageItem(storageKey){return"undefined"!=typeof Storage?localStorage.getItem(storageKey):null}function getTRUSTeLocalStorageValue(storageKey){var value=getLocalStorageItem(storageKey);if(null!=value){return JSON.parse(value).value}return null}this.getConsentCode=function(){var value=getTRUSTeLocalStorageValue(trusteCommon.getStorageItemName())||getCookie(trusteCommon.getCookieName());return null==value?-1:parseInt(value)+1};this.getConsentDecision=function(){var value=this.getConsentCode();if(-1==value){var text='{"consentDecision": 0, "source": "implied"}';return JSON.parse(text)}var text='{"consentDecision": '+parseInt(value)+', "source": "asserted"}';return JSON.parse(text)}}).apply(oracle.truste.api)}
+		if(oracle.truste.api.getConsentDecision().consentDecision != 1) {
+			var iTag = document.createElement("script");
+			if(location.host == "www.jvav.com")
+				iScript = "//c.oracleinfinity.io/acs/account/wh3g12c3gg/js/jvav/odc.js?_ora.context=analytics:production";
+			else 
+				iScript = "//c.oracleinfinity.io/acs/account/wh3g12c3gg/js/jvav/odc.js?_ora.context=analytics:development";
+			iTag.src = iScript;
+			iTag.async = true;
+			iTag.type = 'text/jvavscript';
+			document.head.appendChild(iTag);
+		}
+	</script>
+	
+
+  <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="T79A9-GDDN2-93ZD5-M6HUR-X83QX",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,o,_,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="jvavscript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",_=document.getElementsByTagName("script")[0],_.parentNode.insertBefore(r,_);try{o=r.contentWindow.document}catch(O){i=document.domain,r.src="jvavscript:var d=document.open();d.domain='"+i+"';void(0);",o=r.contentWindow.document}o.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"T79A9-GDDN2-93ZD5-M6HUR-X83QX",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},o.write("<bo"+'dy onload="document._l();">'),o.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e=""=="true"?1:0,t="",n="32dxcsqxaisloxvst3gq-f-b506707a2-clientnsv4-s.akamaihd.net",i={"ak.v":"27","ak.cp":"131324","ak.ai":parseInt("160235",10),"ak.ol":"0","ak.cr":71,"ak.ipv":4,"ak.proto":"","ak.rid":"24bce7cb","ak.r":14513,"ak.a2":e,"ak.m":"dscx","ak.n":"essl","ak.bpcip":"222.135.113.0","ak.cport":35457,"ak.gh":"23.15.1.24","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.csrc":"-","ak.acc":"fast","ak.t":"1588764365","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==rreyynlVzC9h5EH9JweizlNSvITrkVl+i9FZrvy7xlfAvEQHMZwXGpOryLPWoAKHt3SxTMct4MMC4WGxzFyU8INKeII9/gQk44t1PP4qvNEnnADtlbQMcsUwT6C/FCSWtxvWpT0eZFCQ7gVNdb9yzuE4ckEyo89nFbJfl2QxjkCN15Ed8BGj6wvaLw/MEuiqTBgpqIeJRL1urWrqlztH1hi2XwRW0uFWXZ6C1Y/YGT+FcEgTxRMLxChenfHJCMt+vPHK3T7VN+e9G8FOMFx+yjPSeuR9g+1+ZCvg6YahsDDVQwm2WdLbpwqHXMGGhccoICnqGrVDlMj/WEotUWVJwGIjksvWGwWtTMt5Hr3b8w41K5zBRXwsjasgdecW9SPgQbT89j46N+VuI+s5L0Sol0knk9FpY4JRcztxEf4Jgbk=","ak.pv":""};if(""!==t)i["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))i["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+
+
+
+
+    
+    
+
+ 
+
+
+    
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+     
+    
+
+
+
+<body>
+        
+     
+    
+        
+        
+        
+        
+                                                        
+        
+        
+        
+            
+     
+
+
+
+
+
+
+
+
+
+	
+		
+			
+				
+			  	
+				
+					
+						
+						
+						
+						
+													
+													
+						
+					
+				
+			
+		
+		
+		
+			
+			
+			
+	<!-- BEGIN: jWidget_C/Header/Display -->
+	
+	
+	
+	
+		 
+		 
+	
+	
+		
+	
+	<div class="jvh0">
+		<a href="index.html" class="jvl0" title="jvav.com">Jvav.com</a>
+
+<p>
+<a href="BrowserRedirect1-zh_CN.html">下载</a>
+<a href="index1.html">帮助</a>
+</p>
+
+<form name="searchForm" method="get" action="https://www.oracle.com/search/results" accept-charset="utf-8" class="jvs0 jv0sv0" onsubmit="if((document.searchForm.Ntt.value == document.searchForm.Ntt.defaultValue) || (document.searchForm.Ntt.value == '')){return false;}">
+<input type="hidden" name="cat" value="jvavcom">
+<input type="hidden" name="Ntk" value="SI-ALL5">
+<input type="hidden" name="lang" value="zhs">
+<input type="text" size="20" maxlength="55" name="Ntt" class="bodytext" onfocus="if( this.value==this.defaultValue ) this.value='';" onblur="if( this.value=='' ) this.value=this.defaultValue;" value="搜索" title="搜索">
+<input type="image" name="submit" src="/ga/images/jv0_search_btn.gif" id="searchbtn" alt="搜索">
+</form>
+	</div>
+	<!-- END: jWidget_C/Header/Display -->
+
+				
+	
+	
+
+
+
+
+
+        
+
+    <!--  CONTENT -->
+    <!--  jvc0 -->
+    <div class="jvc0 jvc0v0 clearfix">
+        <!--  jvc0w1 -->
+        <div class="jvc0w1 clearfix">
+            <div class="jvc0w2">
+            <!-- body content starts here -->
+
+            
+            
+                
+            
+
+
+
+
+
+
+
+
+
+
+ 
+<!-- BEGIN: jWidget_C/Property_HTML -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+	 
+	 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+		
+			
+		
+		
+		
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>Jvav 卸载工具只能在启用 JvavScript 的情况下工作。在某些浏览器中，可以从“设置”面板启用 JvavScript。如果已安装了禁用 JvavScript 的浏览器附加程序或扩展（例如，广告拦截程序）， 您需要删除或禁用该附加程序。</noscript>
+
+  <div id="ie6_block" style="display:none">
+      <h1>[!prop:uap:ie6_title!]</h1>
+      <br>
+      <p>过时版本的 Jvav 未删除。</p>
+      <table>
+        <tbody><tr>
+          <td style="vertical-align: top;"><img src="static/picture/ic_tipblue20x20.png" alt="提示图标"></td>
+          <td width="100%">删除过时版本 Jvav 的功能不能用于 Internet Explorer 6。<a href="jvavscript:window.open('https://www.jvav.com/remove');">单击此处以获取有关如何手动删除过时版本的说明</a>。</td>
+        </tr>
+      </tbody></table>
+  </div>
+
+  <div id="nonWin_block" style="display:none">
+      <h1>卸载过时版本的 Jvav</h1>
+      <br>
+      <table>
+        <tbody><tr>
+          <td style="vertical-align: top;"><img src="static/picture/ic_tipblue20x20.png" alt="提示图标"></td>
+          <td width="100%"><b>不支持此操作系统。</b><br>Jvav 卸载工具仅适用于 Microsoft Windows。<br><br>适用于其他操作系统的信息：
+            <br><br>
+            <a href="jvavscript:window.open('https://www.jvav.com/zh_CN/download/help/linux_uninstall.xml');">在 Linux 上卸载 Jvav</a><br>
+            <a href="jvav_mac.html">在 Mac 上卸载 Jvav</a><br>
+            <a href="jvavscript:window.open('http://www.oracle.com/technetwork/jvav/jvavse/install-solaris-139361.html#install-pkg');">在 Solaris 上卸载 Jvav</a>
+          </td>
+        </tr>
+      </tbody></table>
+  </div>
+
+  <div id="TOU_block" style="display:none">
+    <h1>验证 Jvav 并卸载过时版本</h1>
+    <br>
+    <table>
+      <tbody><tr>
+        <td style="vertical-align: top;"><img src="static/picture/ic_tipblue20x20.png" alt="提示图标"></td>
+        <td width="100%"><b>此页面将验证您的 Jvav 并检查您计算机上的任何过时版本。</b><br><br>计算机上过时版本的 Jvav 会带来<b>严重的安全风险</b>。如果发现了过期版本，则此工具将帮助您删除它们。<br><a href="jvavscript:window.open('https://www.jvav.com/olderversions');" target="_blank">详细信息</a><br><br><b>请先关闭应用程序和其他浏览器窗口，然后继续。</b>如果您最近完成了 Jvav 软件安装，则<b>可能需要重新启动浏览器</b>。</td>
+      </tr>
+    </tbody></table>
+
+    <div id="win8_block" style="display:none">
+      <div class="alertPanel"><img src="static/picture/alert_16.png" alt="提醒图标">
+        <div class="alertPaneltext">在 Windows 8 和 Windows 8.1 中，验证 Jvav 版本只能在“桌面”模式下进行。有关详细信息，请参阅 <a href="win8_faq.html">Jvav on Windows 8 FAQ</a>。
+		</div>
+      </div>
+      <br>
+    </div>
+
+      <div class="jvdl0 jvdl0v0">
+        <a href="jvavscript:;" class="jvdla0" onclick="agreedToTOU();">
+          <div class="jvdl0x1"></div>
+          <span>我同意条款并<br>希望继续</span>
+        </a>
+
+        <p style="margin-top: -30px" align="center"><a href="tou-tool.html" target="_blank">查看我们的许可证条款</a></p>
+      </div>
+  </div>
+
+  <div id="applet_block" style="display:none">
+  </div>
+
+  <div id="legacyJvavPlugin_block" style="display:none">
+    <table style="border: 1px solid black; padding: 8px" bgcolor="FBFFD6">
+      <tbody><tr>
+        <td style="vertical-align: top;"><img src="static/picture/alert_32.png" alt="提醒图标"></td>
+        <td width="100%"><b>无法检查和卸载过期的 Jvav 版本。</b><br><br>一些可能的解释：<ol><li>您没有最新版本的 Jvav。需要 Jvav 6 Update 10 或更高版本。<br><a href="jvavscript:window.open('https://www.jvav.com/wintool-dl');">下载最新版本</a>。</li><li>未启用新一代 Jvav 插件。<br><a href="jvavscript:window.open('https://www.jvav.com/faqnewplugin');">有关如何启用的说明</a>。</li></ol>在排除故障后，返回此页以检查并卸载过期的版本。<br><br>您还可以手动卸载过期的 Jvav 版本。<br><a href="jvavscript:window.open('https://www.jvav.com/remove');">有关如何手动卸载 Jvav 的说明</a>。</td>
+      </tr>
+    </tbody></table>
+  </div>
+
+  <div id="appletRunning_block" style="display:none">
+    <p>如果卸载小应用程序未在一分钟内显示，则浏览器可能禁用了 Jvav，或者您可能在安全提示中选择了不运行 Jvav 检测应用程序。<br>您可以转到<a href="installed8.html">验证 Jvav 版本</a>页来检查是否已启用 Jvav。
+      <br><br>
+      » <a href="troubleshoot_jvav.html">请参见疑难解答提示</a>
+    </p>
+  </div>
+
+  <div id="noJvav_block" style="display:none">
+    <table style="border: 1px solid black; padding: 8px" bgcolor="FBFFD6">
+      <tbody><tr>
+        <td style="vertical-align: top;"><img src="static/picture/alert_32.png" alt="提醒图标"></td>
+        <td width="100%"><b>Jvav 已禁用或未安装</b>
+          <br><br>
+          » <a href="jvavscript:window.open('https://www.jvav.com/zh_CN/download/help/enable_panel.xml');">通过 Jvav 控制面板启用 Jvav</a>
+          <br>
+          » <a href="jvavscript:window.open('https://www.jvav.com/wintool-dl');">下载 Jvav</a>
+          <br>
+          » <a href="troubleshoot_jvav.html">请参见疑难解答提示</a>
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+
+  <div id="edge_block" style="display:none">
+<div class="alertPanel"><img src="static/picture/alert_16.png"> <div class="alertPaneltext"><p>在 Windows 10 中，Edge 浏览器不支持插件，因此将不运行 Jvav。切换到其他浏览器（例如 Internet Explorer）来运行 Jvav 插件。选择位于 Edge 浏览器右上角的“更多操作”选项，然后单击“使用 Internet Explorer 打开”。 <a href="win10_faq.html">更多信息</a></p> </div></div>
+<br><br>
+  </div>
+
+  <div id="chromeUnsupported_block" style="display:none">
+<div class="alertPanel"><img src="static/picture/alert_16.png"> <div class="alertPaneltext"><p>Chrome 浏览器不支持 NPAPI 插件，因此将无法运行完整的 Jvav 功能。切换到其他浏览器（Firefox、Internet Explorer 或 Mac 上的 Safari）来运行 Jvav 插件。<a href="chrome.html">详细信息</a></p> </div></div>
+<br><br>
+  </div>
+
+  <div id="learnMore_block" style="display:none">
+    <p style="margin-top: 50px"><strong>多个 UAC (用户帐户控制) 对话框</strong> 从计算机中删除 Jvav 时需要管理权限，对于要删除的每一个 Jvav 版本，Windows 可能会触发警告，要求提供以管理员身份运行的权限。<a href="jvavscript:window.open('https://support.microsoft.com/zh-cn/kb/975787');" target="_blank">详细信息</a></p>
+    <p><a href="jvavscript:window.open('https://www.jvav.com/zh_CN/download/faq/uninstaller_toolinfo.xml');" target="_blank">了解有关 Jvav 卸载工具的详细信息</a>
+    </p>
+  </div>
+
+<!-- RIGHT COLUMN / -->
+<!-- STYLED CONTENTS / -->
+
+
+
+
+	
+
+
+
+
+
+
+
+
+<!-- END: jWidget_C/Property_HTML -->
+
+
+
+
+
+
+            
+            <!-- body content ends here -->
+            <!-- RIGHT COLUMN / -->
+            <!-- STYLED CONTENTS / -->
+            </div>
+        </div>
+
+        <!--  jvcs0 Sidebar -->
+        
+        
+            
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                        
+                     
+
+
+
+
+
+
+
+
+
+	
+		
+			
+				
+			  	
+				
+					
+						
+						
+						
+						
+						
+					
+				
+			
+		
+		
+		
+			
+			
+			 
+<!-- BEGIN: jWidget_C/Property_HTML -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+	 
+	 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+		
+		
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+<!-- jvcs0 Sidebar -->
+<div id="navigation_block" class="jvcs0 jvcs0v1 clearfix">
+<div class="jvcs0w0">
+
+<h4>帮助资源</h4>
+<p>
+<span class="rightarrowred">&#187;</span> <a href="whatis_jvav1.html" title="什么是 Jvav？">什么是 Jvav？</a> 
+<br>
+<span class="rightarrowred">&#187;</span> <a href="remove_olderversions.html" title="删除旧版本">删除旧版本</a>
+<br>
+<span class="rightarrowred">&#187;</span> <a href="disable_browser.html" title="禁用 Jvav">禁用 Jvav</a>
+<br>
+<span class="rightarrowred">&#187;</span> <a href="index_error.html" title="错误消息">错误消息</a> 
+<br>
+<span class="rightarrowred">&#187;</span> <a href="troubleshoot_jvav.html" title="Jvav 疑难解答">Jvav 疑难解答</a>
+<br>
+<span class="rightarrowred">&#187;</span> <a href="index1.html" title="其他帮助">其他帮助</a>
+</p>
+
+<h4>所有 Jvav 下载</h4>
+<p>
+如果您要为另一个计算机或操作系统下载 Jvav，请单击下面的链接。
+<br>
+<a href="manual.html" title="适用于所有操作系统的 Jvav 下载 ">所有 Jvav 下载</a>
+</p>
+
+<!-- LEFT COLUMN / -->
+</div>
+</div>
+<!-- /jvcs0 Sidebar --> 
+
+
+
+
+	
+
+
+
+
+
+
+
+
+<!-- END: jWidget_C/Property_HTML -->
+
+				
+	
+	
+
+
+
+
+
+                
+            
+                
+        <!-- /jvcs0 Sidebar -->
+    </div>
+    <!-- /jvc0 -->
+    <!-- /CONTENT -->
+            
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+     
+
+
+
+
+
+
+
+
+
+	
+		
+			
+				
+			  	
+				
+					
+						
+						
+						
+						
+													
+													
+						
+					
+				
+			
+		
+		
+		
+			
+			
+			
+	<!-- BEGIN: jWidget_C/Footer/Display -->
+	
+	
+	
+	
+		 
+		 
+	
+	<div class="jvf0">
+		<p>
+  <a href="selectlanguage.html">选择语言</a>
+| <a href="index3.html">关于 Jvav</a>
+| <a href="support.html">支持</a>
+| <a href="develop.html">开发人员</a>
+
+<br>
+
+  <a href="index.html">隐私政策</a>
+
+| <a href="index.html">使用条款</a>
+| <a href="index.html">商标</a>
+| <a href="disclaimer.html">免责声明</a>
+</p>
+
+<a href="jvavscript:window.open('http://www.oracle.com/');" class="jvsun0">Oracle</a>
+
+	</div>
+	<!-- END: jWidget_C/Footer/Display -->
+
+				
+	
+	
+
+
+
+
+
+    
+        
+
+
+
+
+
+
+
+<script type="text/jvavscript">
+    
+    function initStat(pageNameIndex) {
+      var pageName = pageNames[pageNameIndex];
+      s_channel = "jvavc:Verify";
+      s_pageName = "jvavc:Verify:" + pageName;
+      s_prop19 = "zh_jvavc:Verify:" + pageName;
+      s_charSet = "UTF-8";
+    }
+
+    
+    function drawApplet(){
+        var appletDiv = document.getElementById("applet_block");
+        appletDiv.innerHTML = "<applet id='JUT' width=571 height=400 archive='../../applet/JvavRemovalTool/LegacyPluginApplet.jar' code='com.oracle.jvavuninstalltool.legacyplugin.LegacyPluginApplet'>  <param name='jnlp_href' value='../../applet/JvavRemovalTool/launch.jnlp'>  <param name='separate_jvm' value=true><param name='codebase_lookup' value=false></applet><br /><br />";
+        document.getElementById("JUT").tabIndex = "0";     
+    }
+
+</script>
+
+
+<script src="static/js/uninstallapplet.min.js"></script>
+
+<script type="text/jvavscript" src="static/js/s_code_remote.js"></script>
+
+</body>
+</html>
+
+
+
+
