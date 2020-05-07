@@ -1,0 +1,2 @@
+def play input a 请输入一个数字：;if = a "6":break;print "输入的不正确"
+for 10 func play##
