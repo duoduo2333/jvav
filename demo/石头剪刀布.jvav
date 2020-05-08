@@ -1,0 +1,12 @@
+sys python exec("import os")
+def pause print "按任意键退出...";sys python exec("os.system(\"pause>nul\")")
+print "1.石头 2.剪刀 3.布"
+for 0 input player 请选择：;if = player "1":break;if = player "2":break;if = player "3":break;print "输入不正确"
+randint ai "1" "3"
+def win print "你赢了"
+def lost print "你输了"
+def no print "平局"
+if = player "1":if = ai "1":func no;if = ai "2":fucn win;if = ai "3":func lost
+if = player "2":if = ai "1":func lose;if = ai "2":fucn no;if = ai "3":func win
+if = player "3":if = ai "1":func win;if = ai "2":fucn lose;if = ai "3":func no
+func pause##
