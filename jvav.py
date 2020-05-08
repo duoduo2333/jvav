@@ -17,7 +17,7 @@ def getVar(name):
     try:
         return varlist[name]
     except KeyError:
-        error("变量不存在"+name)
+        error("变量不存在："+name)
         return ""
 
 def run(cmd):
@@ -211,7 +211,11 @@ def run(cmd):
             a = params.split(" ")[1]
             b = params.split(" ")[2]
             if not(a[0:1] == "\"" and a[-1:] == "\""):
-                a = int(getVar(a))
+                try:
+                    a = int(getVar(a))
+                except ValueError:
+                    error("参数值必须是整数")
+                    return 0
             else:
                 try:
                     a = int(a[1:-1])
@@ -219,7 +223,11 @@ def run(cmd):
                     error("参数值必须是整数")
                     return 0
             if not(b[0:1] == "\"" and b[-1:] == "\""):
-                b = int(getVar(b))
+                try:
+                    b = int(getVar(b))
+                except ValueError:
+                    error("参数值必须是整数")
+                    return 0
             else:
                 try:
                     b = int(b[1:-1])
@@ -227,6 +235,7 @@ def run(cmd):
                     error("参数值必须是整数")
                     return 0
             varlist[name] = random.randint(a, b)
+            
 
         elif main == "string":
             option = params.split(" ")[0]
