@@ -219,7 +219,7 @@ def run(cmd):
             else:
                 try:
                     a = int(a[1:-1])
-                except TypeError:
+                except ValueError:
                     error("参数值必须是整数")
                     return 0
             if not(b[0:1] == "\"" and b[-1:] == "\""):
@@ -231,12 +231,14 @@ def run(cmd):
             else:
                 try:
                     b = int(b[1:-1])
-                except TypeError:
+                except ValueError:
                     error("参数值必须是整数")
                     return 0
-            varlist[name] = random.randint(a, b)
+            try:
+                varlist[name] = random.randint(a, b)
+            except ValueError:
+                error("最小值不能比最大值大")
             
-
         elif main == "string":
             option = params.split(" ")[0]
             if option == "add":
@@ -274,7 +276,7 @@ def inputcmd():
     run(input(">>> "))
 
 if len(sys.argv) == 1:
-    print("Jvav 1.1.0 on windows")
+    print("Jvav 1.1.1 on windows")
     print("Type \"help\" for more information")
 else:
     with open(sys.argv[1], newline="\n", encoding='UTF-8') as f:
