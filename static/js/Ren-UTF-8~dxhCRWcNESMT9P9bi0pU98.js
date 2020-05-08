@@ -1,2 +1,0 @@
-/*AQAAAFNIQS0yNTYAAQAAAAAAAQAAAAAA2T58qWSuSyMGRJK6PZjYLOB_sKz7JHH4dAVKiOYJxDk*//* Script imported from https://www.java.com/ga/js/popUp.js */
-aFeoOverrideAttrRead("script","src");function openPopup(url,name,width,height,resizable,scrollbars,menubar,toolbar,location,directories,status){popup=window.open(url,name,"width="+width+",height="+height+",resizable="+resizable+",scrollbars="+scrollbars+",menubar="+menubar+",toolbar="+toolbar+",location="+location+",directories="+directories+",status="+status);popup.focus();}

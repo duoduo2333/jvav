@@ -1,0 +1,6 @@
+sys python exec("import os")
+def pause print "按任意键退出...";sys python exec("os.system(\"pause>nul\")")
+def changeTitle sys python import os;sys python os.system("title "+getVar("title"))
+var str title 自定义窗口标题测试
+func changeTitle
+func pause##

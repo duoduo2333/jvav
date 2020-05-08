@@ -1,0 +1,11 @@
+var int a 10
+var int b 3
+calc + a b c
+print c
+calc - a b c
+print c
+calc * a b c
+print c
+calc / a b c
+print c
+input n 按回车继续##

@@ -1,0 +1,2 @@
+def play input n 请输入一个数字:;if = n "6":break;if < n "6":print "小了";if > n "6":print "大了"
+for 0 func play##

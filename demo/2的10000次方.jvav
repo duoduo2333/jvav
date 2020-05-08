@@ -1,0 +1,5 @@
+var int result 2
+for 9999 calc * result "2" result
+print "result:"
+print result
+input a ##

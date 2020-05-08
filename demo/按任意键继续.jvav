@@ -1,0 +1,4 @@
+sys python exec("import os")
+print "jvav By duoduo"
+def pause print "按任意键退出...";sys python exec("os.system(\"pause>nul\")")
+func pause##
