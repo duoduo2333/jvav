@@ -1,7 +1,14 @@
 import sys
+import random
 
 varlist = {}
 function = {}
+
+def getText(name):
+    if name[0:1] == "\"" and name[-1:] == "\"":
+        return name[1:-1]
+    else:
+        return getVar(name)
 
 def error(text=""):
     print("JvavError:", text)
@@ -31,7 +38,7 @@ def run(cmd):
         elif main == "sys":
             sys_params = params.split(" ")
             if sys_params[0] == "exit":
-                exit()
+                sys.exit()
             elif sys_params[0] == "varlist":
                 print(varlist)
             elif sys_params[0] == "func":
@@ -128,8 +135,9 @@ def run(cmd):
                 except RecursionError:
                     error("已经达到最高递归上限")
                     return 0
+        
         elif main == "help":
-            print("https:\\\\www.baidu.com\\")
+            print("Jvav 文档：https://github.com/duoduo2333/jvav/wiki")
         
         elif main == "for":
             try:
@@ -159,12 +167,12 @@ def run(cmd):
                     varlist["n"] = n
                     if runfor() == "break":
                         break
-                        
         
         elif main == "input":
             name = params.split(" ", 1)[0]
             text = params.split(" ", 1)[1]
             varlist[name] = input(text)
+        
         elif main == "calc":
             s = params.split(" ")[0]
             a = params.split(" ")[1]
@@ -198,6 +206,56 @@ def run(cmd):
         elif main == "break":
             return "break"
 
+        elif main == "randint":
+            name = params.split(" ")[0]
+            a = params.split(" ")[1]
+            b = params.split(" ")[2]
+            if not(a[0:1] == "\"" and a[-1:] == "\""):
+                a = int(getVar(a))
+            else:
+                try:
+                    a = int(a[1:-1])
+                except TypeError:
+                    error("参数值必须是整数")
+                    return 0
+            if not(b[0:1] == "\"" and b[-1:] == "\""):
+                b = int(getVar(b))
+            else:
+                try:
+                    b = int(b[1:-1])
+                except TypeError:
+                    error("参数值必须是整数")
+                    return 0
+            varlist[name] = random.randint(a, b)
+
+        elif main == "string":
+            option = params.split(" ")[0]
+            if option == "add":
+                a = params.split(" ")[1]
+                b = params.split(" ")[2]
+                result = params.split(" ")[3]
+                if a[0:1] == "\"" and a[-1:] == "\"":
+                    a = a[1:-1]
+                else:
+                    a = getVar(a)
+                if b[0:1] == "\"" and b[-1:] == "\"":
+                    b = b[1:-1]
+                else:
+                    b = getVar(b)
+                varlist[result] = str(a)+str(b)
+            elif option == "cut":
+                string = getText(params.split(" ")[1])
+                try:
+                    start = int(getText(params.split(" ")[2]))
+                    stop = int(getText(params.split(" ")[3]))
+                except ValueError:
+                    error("请输入整数")
+                    return 0
+                result = params.split(" ")[4]
+                varlist[result] = str(string)[start:stop]
+                
+                
+            
         else:
             error("命令错误")
             
@@ -207,13 +265,13 @@ def inputcmd():
     run(input(">>> "))
 
 if len(sys.argv) == 1:
-    print("Jvav 1.0.0 on windows")
+    print("Jvav 1.1.0 on windows")
     print("Type \"help\" for more information")
 else:
     with open(sys.argv[1], newline="\n", encoding='UTF-8') as f:
         for each in f:
             run(each[:-2])
-    exit()
+    sys.exit()
 
 firstexit = True
 while True:
@@ -224,4 +282,4 @@ while True:
             print("\n再次按CTRL+C或使用sys exit退出")
             firstexit = False
         else:
-            exit()
+            sys.exit()
