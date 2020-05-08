@@ -16,7 +16,7 @@ Jvav源码：https://github.com/duoduo2333/jvav/tree/master/jvav
 ### 1.0.1
 
 1. 修改 打错的字   
-2. 新增 演示程序（https://sduoduo.lanzous.com/icd5g9a）   
+2. 新增 演示程序（https://sduoduo.lanzous.com/icd5g9a ）   
 
 ### 1.1.0
 
